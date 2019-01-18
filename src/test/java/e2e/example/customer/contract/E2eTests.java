@@ -37,12 +37,10 @@ public class E2eTests {
 				.getForEntity("http://" + this.applicationUrl + "/customer/1", CustomerResponse.class);
 
 		then(entity.getStatusCode().is2xxSuccessful()).isTrue();
-		System.out.println("checking for name 'Florian Pfleiderer'");
-		then(entity.getBody().getName()).isEqualTo("Florian Pfleiderer");
-		System.out.println("checking for firstName 'Florian'");
-		then(entity.getBody().getFirstName()).isEqualTo("Florian");
-		System.out.println("checking for lastName 'Pfleiderer'");
-		then(entity.getBody().getLastName()).isEqualTo("Pfleiderer");
+		System.out.println("checking for firstName 'Frank'");
+		then(entity.getBody().getFirstName()).isEqualTo("Frank");
+		System.out.println("checking for lastName 'Scheffler'");
+		then(entity.getBody().getLastName()).isEqualTo("Scheffler");
 	}
 
 }
