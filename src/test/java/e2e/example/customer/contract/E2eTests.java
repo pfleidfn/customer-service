@@ -39,6 +39,10 @@ public class E2eTests {
 		then(entity.getStatusCode().is2xxSuccessful()).isTrue();
 		System.out.println("checking for name 'Florian Pfleiderer'");
 		then(entity.getBody().getName()).isEqualTo("Florian Pfleiderer");
+		System.out.println("checking for firstName 'Florian'");
+		then(entity.getBody().getFirstName()).isEqualTo("Florian");
+		System.out.println("checking for lastName 'Pfleiderer'");
+		then(entity.getBody().getLastName()).isEqualTo("Pfleiderer");
 	}
 
 }
