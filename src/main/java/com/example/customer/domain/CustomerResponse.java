@@ -13,11 +13,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CustomerResponse {
 
+    private String name;
     private String firstName;
     private String lastName;
 
     public static CustomerResponse fromCustomer(Customer customer) {
-        return new CustomerResponse(customer.getFirstName(), customer.getLastName());
+        String fullName = customer.getFirstName() + " " + customer.getLastName();
+        return new CustomerResponse(fullName, customer.getFirstName(), customer.getLastName());
     }
 
 }

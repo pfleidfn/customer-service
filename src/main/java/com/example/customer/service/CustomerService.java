@@ -14,7 +14,8 @@ public class CustomerService {
 
     @PostConstruct
     public void insertDemoCustomers() {
-        customers.put(1L, new Customer("Frank", "Scheffler"));
+        customers.put(1L, new Customer("Florian", "Pfleiderer"));
+        customers.put(2L, new Customer("Frank", "Scheffler"));
     }
 
     public Optional<Customer> getCustomer(long customerId) {
