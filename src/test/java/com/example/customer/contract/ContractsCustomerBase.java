@@ -1,18 +1,16 @@
 package com.example.customer.contract;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyLong;
-import static org.mockito.Mockito.when;
-
 import com.example.customer.domain.Customer;
+import com.example.customer.service.CustomerService;
 import org.junit.Before;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.example.customer.service.CustomerService;
-
 import java.util.Optional;
 
-public class CustomerBase extends MockMvcBase {
+import static org.mockito.Matchers.anyLong;
+import static org.mockito.Mockito.when;
+
+public class ContractsCustomerBase extends MockMvcBase {
 
     @MockBean
     private CustomerService customerService;

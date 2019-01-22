@@ -8,7 +8,6 @@ org.springframework.cloud.contract.spec.Contract.make {
 	response {
 		status 200
 		body([
-				firstName : 'Florian',
 				lastName : 'Pfleiderer'
 		])
 		headers {

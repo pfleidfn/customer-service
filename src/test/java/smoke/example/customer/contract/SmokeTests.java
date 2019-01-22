@@ -38,8 +38,6 @@ public class SmokeTests {
 				.getForEntity("http://" + this.applicationUrl + "/customer/1", CustomerResponse.class);
 
 		then(entity.getStatusCode().is2xxSuccessful()).isTrue();
-		System.out.println("checking for firstName 'Florian'");
-		then(entity.getBody().getFirstName()).isEqualTo("Florian");
 		System.out.println("checking for lastName 'Pfleiderer'");
 		then(entity.getBody().getLastName()).isEqualTo("Pfleiderer");
 	}
